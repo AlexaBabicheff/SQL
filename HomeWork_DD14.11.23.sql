@@ -9,7 +9,6 @@ use hr;
 select
 	count(*) as employees_quantity
 from employees 
-WHERE salary < (SELECT 
+WHERE department_id=60 and salary < (SELECT 
 				AVG(salary) avg_salary
 				FROM employees);
-
